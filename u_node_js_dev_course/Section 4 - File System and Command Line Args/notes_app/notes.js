@@ -43,7 +43,7 @@ const loadNotes = () => {
   }
 };
 
-const saveNotes = async function(notes) {
+const saveNotes = async notes => {
   const dataJSON = JSON.stringify(notes);
   await writeFile("notes.json", dataJSON, err => {
     if (err) throw error;
